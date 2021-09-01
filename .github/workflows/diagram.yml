@@ -14,3 +14,8 @@ jobs:
         uses: dyrean/crwn-clothing@main
         with:
           excluded_paths: "ignore,.github"
+      - name: Repo Visualizer
+        uses: githubocto/repo-visualizer@0.7.0
+        with:
+          excluded_paths: "ignore,.github"
+          branch: "main"
