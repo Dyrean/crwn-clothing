@@ -5,7 +5,7 @@ export const CollectionItemContainer = styled.div`
   width: 22vw;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 400px;
   align-items: center;
   position: relative;
   &:hover {
@@ -23,7 +23,7 @@ export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 255px;
+  top: 300px;
   display: none;
 `;
 
