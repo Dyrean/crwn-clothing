@@ -6,14 +6,14 @@ export const CollectionPageContainer = styled.div`
 `;
 
 export const CollectionTitleContainer = styled.h2`
-  font-size: 38px;
+  font-size: 28px;
   margin: 0 auto 30px;
 `;
 
 export const CollectionItemsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 15px;
 
   & .collection-item {
     margin-bottom: 30px;

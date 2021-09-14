@@ -7,13 +7,13 @@ export const CollectionPreviewContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     align-items: center;
-    font-size: 18px;
+    margin-bottom: 10px;
   }
 `;
 
 export const TitleContainer = styled.h1`
   font-size: 28px;
-  margin-bottom: 25px;
+  margin: 0 auto 30px;
   cursor: pointer;
   &:hover {
     color: grey;
