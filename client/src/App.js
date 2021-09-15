@@ -31,7 +31,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Switch>
-        {/* <ErrorBoundary> */}
+        <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
             <Route exact path="/" component={HomePage} />
             <Route path="/shop" component={ShopPage} />
@@ -44,7 +44,7 @@ const App = () => {
               }
             />
           </Suspense>
-        {/* </ErrorBoundary> */}
+        </ErrorBoundary>
       </Switch>
     </div>
   );
