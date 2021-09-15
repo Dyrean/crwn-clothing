@@ -24,7 +24,8 @@ const ErrorCom = ({ error }) => {
     <ErrorImageOverlay>
       <ErrorImageContainer imageUrl="https://error404.fun/img/illustrations/24.png" />
       <ErrorImageText>
-        Sorry, We can't find the page that you are looking for
+        <span>Sorry, We can't find the page that you are looking for</span>
+        <span>{error?.message}</span>
       </ErrorImageText>
     </ErrorImageOverlay>
   );
