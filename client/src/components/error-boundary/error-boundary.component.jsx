@@ -4,7 +4,7 @@ import {
   ErrorImageOverlay,
   ErrorImageContainer,
   ErrorImageText,
-} from "./error-fallback.styles";
+} from "./error-boundary.styles";
 
 class ErrorFallback extends React.Component {
   constructor(props) {
