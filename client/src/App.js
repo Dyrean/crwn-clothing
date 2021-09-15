@@ -32,9 +32,9 @@ const App = () => {
     <div>
       <GlobalStyle />
       <Header />
-      <ErrorBoundary FallbackComponent={ErrorCom}>
-        <Suspense fallback={<Spinner />}>
-          <Switch>
+      <Switch>
+        <ErrorBoundary FallbackComponent={ErrorCom}>
+          <Suspense fallback={<Spinner />}>
             <Route exact path="/" component={HomePage} />
             <Route path="/shop" component={ShopPage} />
             <Route exact path="/checkout" component={CheckoutPage} />
@@ -45,9 +45,9 @@ const App = () => {
                 currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
-          </Switch>
-        </Suspense>
-      </ErrorBoundary>
+          </Suspense>
+        </ErrorBoundary>
+      </Switch>
     </div>
   );
 };
