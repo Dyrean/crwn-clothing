@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
@@ -29,4 +29,4 @@ ReactDOM.render(
 if (process.env.NODE_ENV === "development") {
   reportWebVitals(console.log);
 }
-// serviceWorkerRegistration.unregister();
+serviceWorkerRegistration.register();
