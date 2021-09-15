@@ -1,10 +1,12 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { ErrorBoundary } from "react-error-boundary";
 
 import Header from "./components/header/header.component";
 import Spinner from "./components/spinner/spinner.component";
-import ErrorBoundary from "./components/error-boundary/error-boundary.component";
+import ErrorFallback from "./components/error-fallback/error-fallback.component";
+import ErrorCom from "./components/error-fallback/error";
 
 import { GlobalStyle } from "./global.styles";
 
@@ -30,9 +32,9 @@ const App = () => {
     <div>
       <GlobalStyle />
       <Header />
-      <Switch>
-        <ErrorBoundary>
-          <Suspense fallback={<Spinner />}>
+      <ErrorBoundary FallbackComponent={ErrorCom}>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/shop" component={ShopPage} />
             <Route exact path="/checkout" component={CheckoutPage} />
@@ -43,9 +45,9 @@ const App = () => {
                 currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
-          </Suspense>
-        </ErrorBoundary>
-      </Switch>
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

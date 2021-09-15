@@ -4,9 +4,9 @@ import {
   ErrorImageOverlay,
   ErrorImageContainer,
   ErrorImageText,
-} from "./error-boundary.styles";
+} from "./error-fallback.styles";
 
-class ErrorBoundary extends React.Component {
+class ErrorFallback extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,7 +16,6 @@ class ErrorBoundary extends React.Component {
   }
   static getDerivedStateFromError(error) {
     // Process the error
-    console.log(error);
     return { hasErrored: true };
   }
 
@@ -40,4 +39,4 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-export default ErrorBoundary;
+export default ErrorFallback;
