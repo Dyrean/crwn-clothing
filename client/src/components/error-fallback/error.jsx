@@ -7,7 +7,7 @@ import {
   ErrorImageText,
 } from "./error-fallback.styles";
 
-export const ErrorCom = ({ error }) => {
+const ErrorCom = ({ error }) => {
   // Handles failed lazy loading of a JS/CSS chunk.
   useEffect(() => {
     const chunkFailedMessage = /Loading chunk [\d]+ failed/;
