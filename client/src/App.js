@@ -5,7 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import Header from "./components/header/header.component";
 import Spinner from "./components/spinner/spinner.component";
-import ErrorFallback from "./components/error-fallback/error-fallback.component";
+// import ErrorFallback from "./components/error-fallback/error-fallback.component";
 import ErrorCom from "./components/error-fallback/error";
 
 import { GlobalStyle } from "./global.styles";
